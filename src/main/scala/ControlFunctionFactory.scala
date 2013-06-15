@@ -1,5 +1,3 @@
-package bot1
-
 import de.fg.scala.bot.CommandResponder
 
 class ControlFunctionFactory {

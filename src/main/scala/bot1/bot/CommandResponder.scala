@@ -1,19 +1,19 @@
 package de.fg.scala.bot
 
 import util.Random
-import bot1.bot.{MiniBot, MainBot}
+import bot1.bot.{MiniBot, MasterBot}
 
 class CommandResponder {
 
 
-  val mainBot = new MainBot()
+  val mainBot = new MasterBot()
   val miniBot = new MiniBot()
 
 
   def respond(input: String): String = {
     val (opcode, paramMap) = CommandParser(input)
     if (opcode != "React") {
-      return ""
+      return "Say(text='received unknown opcode: " + opcode + " ')"
     }
 
 

@@ -1,5 +1,5 @@
-import de.fg.scala.bot.CommandResponder
+import de.fg.scala.bot.ControlFunction
 
 class ControlFunctionFactory {
-  def create = new CommandResponder().respond _
+  def create = new ControlFunction().respond _
 }

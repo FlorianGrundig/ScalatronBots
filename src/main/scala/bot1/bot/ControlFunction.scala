@@ -1,12 +1,11 @@
 package de.fg.scala.bot
 
-import util.Random
 import bot1.bot.{MiniBot, MasterBot}
 
-class CommandResponder {
+class ControlFunction {
 
 
-  val mainBot = new MasterBot()
+  val masterBot = new MasterBot()
   val miniBot = new MiniBot()
 
 
@@ -19,7 +18,7 @@ class CommandResponder {
 
     val generation = paramMap("generation").toInt
     if (generation == 0) {
-      mainBot.react(opcode,paramMap)
+      masterBot.react(opcode,paramMap)
     } else {
       miniBot.react(opcode,paramMap)
     }

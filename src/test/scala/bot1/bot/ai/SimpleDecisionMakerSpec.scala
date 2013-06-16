@@ -1,6 +1,7 @@
-package bot1.bot
+package bot1.bot.ai
 
 import org.scalatest.FunSuite
+import bot1.bot.grid.Grid
 
 
 class SimpleDecisionMakerSpec extends FunSuite{

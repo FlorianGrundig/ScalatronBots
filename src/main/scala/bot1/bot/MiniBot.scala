@@ -1,6 +1,6 @@
 package bot1.bot
 
-import de.fg.scala.bot.Coordinate
+import bot1.bot.grid.Coordinate
 
 class MiniBot {
    def react(opcode: String, paramMap:  Map[String, String]): String = {

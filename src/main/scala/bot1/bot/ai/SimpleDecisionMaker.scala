@@ -1,6 +1,7 @@
-package bot1.bot
+package bot1.bot.ai
 
-import de.fg.scala.bot.Coordinate
+import bot1.bot.grid.{GridElement, Direction, Grid, Coordinate}
+import bot1.bot.Status
 
 
 case class SimpleDecisionMaker(grid: Grid) {
@@ -10,7 +11,7 @@ case class SimpleDecisionMaker(grid: Grid) {
     val availableDirections = getAvailableDirections()
 
     var nextHeading = availableDirections(0)
-    if (!isThereSomethingEvil(Status.currentHeading) && !Status.currentHeading.isSame(Coordinate(0,0))){
+    if (!isThereSomethingEvil(Status.currentHeading) && Status.currentHeading != Coordinate(0,0)){
       nextHeading = Status.currentHeading
     }
 

@@ -1,5 +1,4 @@
-package bot1.bot
-
+package bot1.bot.grid
 
 object GridElement extends Enumeration {
   type GridElement = Value

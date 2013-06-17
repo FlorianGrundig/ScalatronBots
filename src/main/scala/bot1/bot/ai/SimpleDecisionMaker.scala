@@ -28,10 +28,10 @@ case class SimpleDecisionMaker(grid: Grid) {
       while (grid.isCoordinateValid(coordinate.+(direction))) {
         coordinate = coordinate.+(direction)
         if (isThereSomethingGood(coordinate)) {
-          numberOfGoodThings += (grid.Radius - distanceFromMaster) ^ 2
+          numberOfGoodThings += math.pow(grid.Radius - distanceFromMaster, 2).toInt
         } else
         if (isThereSomethingEvil(coordinate)) {
-          numberOfEvilThings += (grid.Radius - distanceFromMaster) ^ 2
+          numberOfEvilThings += math.pow(grid.Radius - distanceFromMaster, 2).toInt
         }
         distanceFromMaster += 1
       }

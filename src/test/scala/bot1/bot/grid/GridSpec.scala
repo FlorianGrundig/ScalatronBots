@@ -1,6 +1,7 @@
 package bot1.bot.grid
 
 import org.scalatest.{FlatSpec, OneInstancePerTest, FunSpec}
+import scala.collection.mutable
 
 class GridSpec extends FlatSpec {
 
@@ -134,6 +135,24 @@ class GridSpec extends FlatSpec {
     assert(GridElement.Fluppet === grid.getGridElement(Coordinate(0,2)))
     assert(GridElement.Snorg === grid.getGridElement(Coordinate(1,2)))
     assert(GridElement.Unknown === grid.getGridElement(Coordinate(2,2))) // right down
+
+  }
+
+  "coordinatesIterator" should "return a iterator which iterates the grid coordinates from left to right and up to down" in {
+    val expectedCoordinates = List(
+      Coordinate(-1,-1),Coordinate(0,-1),Coordinate(1,-1),
+      Coordinate(-1,0),Coordinate(0,0),Coordinate(1,0),
+      Coordinate(-1,1),Coordinate(0,1),Coordinate(1,1)
+    )
+    val grid = Grid(gridWithLengthOf3)
+
+    val it = grid.coordinatesIterator()
+    var list = new mutable.ListBuffer[Coordinate]()
+    while (it.hasNext){
+      list = list+=it.next()
+    }
+
+    assert(expectedCoordinates === list)
 
   }
 

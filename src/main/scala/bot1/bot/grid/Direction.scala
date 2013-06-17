@@ -1,7 +1,6 @@
 package bot1.bot.grid
 
 import scala.util.Random
-import bot1.bot.grid.Coordinate
 
 /**
  * A direction is vector with the initial point Coordinate(0,0) and terminal point given by the direction coordinate.

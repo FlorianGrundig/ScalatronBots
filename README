@@ -1,3 +1,7 @@
 Bot for http://scalatron.github.io/
 
+The current implementation "Lolita" is a hungry bot, which searches food with the A* algorithm and avoids collision
+with harmful grid elements.
+
+
 Adapt deployBot.sh to your environment...

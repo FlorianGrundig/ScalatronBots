@@ -7,5 +7,5 @@ USAGE:
 
 1. Download Scalatron (http://scalatron.github.io/)
 2. Clone this repo
-3. Adapt deployBot.sh to your environment...
+3. Adapt deployBotAndRun.sh to your environment...
 4. run deployBotAndRun.sh

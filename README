@@ -1,10 +1,11 @@
-Bot for http://scalatron.github.io/
+Bot for http://scalatron.github.io/ which is runnable on Scala 2.9.3...
 
 The current implementation "Lolita" is a hungry bot, which searches food with the A* algorithm and avoids collision
 with harmful grid elements.
 
 USAGE:
 
+0. Download and install sbt (http://www.scala-sbt.org/)
 1. Download Scalatron (http://scalatron.github.io/)
 2. Clone this repo
 3. Adapt deployBotAndRun.sh to your environment...
